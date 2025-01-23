@@ -27,6 +27,7 @@ export default function WorkPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {proyectos.map((proyecto, index) => (
                     <CardSkill
+                        key={index}
                         title={proyecto.title}
                         description={proyecto.description}
                         imagen={proyecto.imagen}
