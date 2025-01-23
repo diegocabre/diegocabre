@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AiTwotoneMail } from "react-icons/ai";
-import { IoLogoInstagram, IoLogoWhatsapp } from "react-icons/io5";
+import { IoLogoInstagram, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
 export const Footer = () => {
     return (
@@ -51,6 +51,14 @@ export const Footer = () => {
                             className="text-3xl hover:text-blue-500 transition-colors duration-300"
                         >
                             <AiTwotoneMail />
+                        </Link>
+                        <Link
+                            href="https://www.linkedin.com/in/diegoantoniocabreperrone/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-3xl hover:text-blue-500 transition-colors duration-300"
+                        >
+                            <IoLogoLinkedin />
                         </Link>
                     </div>
                 </nav>

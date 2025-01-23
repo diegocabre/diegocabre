@@ -22,6 +22,7 @@ export const CardProjet = ({ title, href, description, imagen, button }: Props) 
                         width={500}
                         height={500}
                         style={{ objectFit: 'cover' }}
+                        priority
                     />
                 </div>
             )}
