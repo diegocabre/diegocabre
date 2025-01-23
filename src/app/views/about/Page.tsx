@@ -1,17 +1,17 @@
 export default function AboutPage() {
     return (
-        <div className="relative flex items-center justify-center min-h-screen text-center">
+        <div className="relative min-h-screen text-center">
             <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover -z-10 opacity-70"
+                className="absolute inset-0 w-full h-full object-cover z-0" // Asegúrate de que el z-index es bajo
             >
                 <source src="/video/codigo.mp4" type="video/mp4" />
                 Tu navegador no soporta la reproducción de video.
             </video>
-            <div className="relative bg-black/50 text-white p-6 rounded-lg max-w-3xl mx-auto">
+            <div className="relative bg-black/50 text-white p-6 rounded-lg max-w-3xl mx-auto z-10"> {/* Asegura que el contenido esté por encima del video */}
                 <h1 className="text-3xl sm:text-4xl font-bold mb-4">
                     Hola, soy Diego. Un gusto conocerte.
                 </h1>

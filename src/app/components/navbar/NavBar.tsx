@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+
 export const NavBar = () => {
     const [activeSection, setActiveSection] = useState("Inicio");
 
@@ -27,7 +28,7 @@ export const NavBar = () => {
     };
 
     return (
-        <div className="fixed top-0 left-0 h-screen w-48 bg-background text-letras p-4">
+        <div className="fixed top-0 left-0 h-screen w-48 bg-background text-letras p-4 hidden md:block">
             <ul className="steps steps-vertical">
                 <li
                     className={`step ${activeSection === "Inicio" ? "step-primary" : ""}`}
@@ -36,22 +37,19 @@ export const NavBar = () => {
                     Inicio
                 </li>
                 <li
-                    className={`step ${activeSection === "Quien Soy" ? "step-primary" : ""
-                        }`}
+                    className={`step ${activeSection === "Quien Soy" ? "step-primary" : ""}`}
                     onClick={() => scrollToSection("Quien Soy")}
                 >
                     Quien Soy
                 </li>
                 <li
-                    className={`step ${activeSection === "Proyectos" ? "step-primary" : ""
-                        }`}
+                    className={`step ${activeSection === "Proyectos" ? "step-primary" : ""}`}
                     onClick={() => scrollToSection("Proyectos")}
                 >
                     Proyectos
                 </li>
                 <li
-                    className={`step ${activeSection === "Contacto" ? "step-primary" : ""
-                        }`}
+                    className={`step ${activeSection === "Contacto" ? "step-primary" : ""}`}
                     onClick={() => scrollToSection("Contacto")}
                 >
                     Contacto
