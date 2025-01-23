@@ -89,7 +89,7 @@ export default function HomePage() {
             <main className="text-center px-6 py-16">
                 <h1 className="text-2xl sm:text-3xl font-bold mb-4">Desarrollador Frontend y Backend</h1>
                 <p className="mb-8 text-lg sm:text-xl">Codifico y diseño interfaces web de alta calidad</p>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-titulo">Lenguajes que hablo y Herrramienstas de Desarrollo</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-titulo">Lenguajes que hablo y Herramientas de Desarrollo</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                     {card.map((card, index) => (
                         <CardSkill
