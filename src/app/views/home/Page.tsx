@@ -1,9 +1,9 @@
 import { CardSkill } from "@/app/components/cards/CardSkill";
 import Image from "next/image";
 import { BiLogoPostgresql, BiLogoTailwindCss } from "react-icons/bi";
-import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact, IoLogoGithub, IoLogoNodejs } from "react-icons/io5";
+import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact, IoLogoGithub, IoLogoNodejs, IoLogoAngular } from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
+import { SiAstro, SiTypescript } from "react-icons/si";
 
 export default function HomePage() {
     const card = [
@@ -57,6 +57,16 @@ export default function HomePage() {
             description: "Sistema de gestión de bases de datos relacional.",
             icon: <BiLogoPostgresql style={{ color: "#336791" }} />,
         },
+        {
+            title: "Astro",
+            description: "Astro es un moderno framework JavaScript centrado en el rendimiento. Facilita la creación de aplicaciones web mediante renderizado del lado del servidor y generación de sitios estáticos optimizados.",
+            icon: <SiAstro style={{ color: "#FF5A1F" }} />,
+        },
+        {
+            title: "Angular",
+            description: "Angular es un robusto framework de JavaScript desarrollado por Google, diseñado para crear aplicaciones web dinámicas y escalables.",
+            icon: <IoLogoAngular style={{ color: "#DD0031" }} />,
+        }
     ];
 
     return (
@@ -77,10 +87,10 @@ export default function HomePage() {
 
             {/* Main Content */}
             <main className="text-center px-6 py-16">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Desarrollador Frontend y Backend</h2>
+                <h1 className="text-2xl sm:text-3xl font-bold mb-4">Desarrollador Frontend y Backend</h1>
                 <p className="mb-8 text-lg sm:text-xl">Codifico y diseño interfaces web de alta calidad</p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-titulo">Lenguajes que hablo y Herrramienstas de Desarrollo</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                     {card.map((card, index) => (
                         <CardSkill
                             key={index}

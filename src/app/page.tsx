@@ -1,6 +1,7 @@
 import { NavBar } from "./components";
 import AboutPage from "./views/about/Page";
 import HomePage from "./views/home/Page";
+import WorkPage from "./views/work/Page";
 
 export default function Page() {
   return (
@@ -18,8 +19,8 @@ export default function Page() {
         </section>
 
         {/* Proyectos */}
-        <section className="min-h-screen bg-yellow-100 flex flex-col" id="Proyectos">
-          <h1 className="text-4xl font-bold text-center mt-16">Proyectos</h1>
+        <section className="min-h-screen bg-background flex flex-col" id="Proyectos">
+          <WorkPage />
         </section>
 
         {/* Contacto */}
