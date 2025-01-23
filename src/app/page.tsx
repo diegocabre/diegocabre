@@ -1,5 +1,7 @@
 import { NavBar } from "./components";
+import { Footer } from "./components/footer/Footer";
 import AboutPage from "./views/about/Page";
+import ContactPage from "./views/contact/Page";
 import HomePage from "./views/home/Page";
 import WorkPage from "./views/work/Page";
 
@@ -24,9 +26,11 @@ export default function Page() {
         </section>
 
         {/* Contacto */}
-        <section className="min-h-screen bg-red-100 flex flex-col" id="Contacto">
-          <h1 className="text-4xl font-bold text-center mt-16">Contacto</h1>
+        <section className="min-h-screen bg-titulo flex items-center justify-center" id="Contacto">
+          <ContactPage />
         </section>
+
+        <Footer />
       </div>
     </>
   );
