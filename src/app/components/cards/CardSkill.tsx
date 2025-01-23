@@ -8,18 +8,19 @@ interface Props {
 
 export const CardSkill = ({ title, description, icon }: Props) => {
     return (
-        <div className="w-96 h-64 perspective-1000"> {/* Añadimos perspectiva 3D */}
-            <div className="relative w-full h-full group">
-                {/* Parte delantera de la tarjeta */}
-                <div className="absolute inset-0 bg-base-100 flex justify-center items-center rounded-xl transform-style-preserve-3d transition-transform duration-500 group-hover:rotate-y-180">
-                    {/* Aumentamos el tamaño del icono */}
-                    <div className="text-5xl">{icon}</div>
+        <div className="w-full sm:w-64 h-64 perspective-1000 mx-auto">
+            {/* Contenedor con perspectiva 3D */}
+            <div className="relative w-full h-full group transform-style-preserve-3d">
+                {/* Cara frontal de la tarjeta */}
+                <div className="absolute inset-0 bg-gray-100 flex flex-col justify-center items-center rounded-xl shadow-lg transform-style-preserve-3d transition-transform duration-500 group-hover:rotate-y-180">
+                    <div className="text-5xl mb-4">{icon}</div>
+                    <h2 className="text-xl font-semibold">{title}</h2>
                 </div>
 
-                {/* Parte trasera de la tarjeta */}
-                <div className="absolute inset-0 bg-base-100 p-6 rounded-xl flex flex-col justify-center items-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:rotate-y-180">
-                    <h2 className="text-xl font-bold">{title}</h2>
-                    <p className="text-lg">{description}</p>
+                {/* Cara trasera de la tarjeta */}
+                <div className="absolute inset-0 bg-gray-200 p-6 rounded-xl flex flex-col justify-center items-center text-center shadow-lg opacity-0 transform rotate-y-180 transform-style-preserve-3d transition-transform duration-500 group-hover:opacity-100 group-hover:rotate-y-360">
+                    <h2 className="text-lg font-bold mb-2">{title}</h2>
+                    <p className="text-sm">{description}</p>
                 </div>
             </div>
         </div>
