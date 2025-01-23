@@ -59,12 +59,12 @@ export default function HomePage() {
         },
         {
             title: "Astro",
-            description: "Astro es un moderno framework JavaScript centrado en el rendimiento. Facilita la creación de aplicaciones web mediante renderizado del lado del servidor y generación de sitios estáticos optimizados.",
+            description: "Es un moderno framework JavaScript centrado en el rendimiento. Facilita la creación de aplicaciones web mediante renderizado del lado del servidor y generación de sitios estáticos optimizados.",
             icon: <SiAstro style={{ color: "#FF5A1F" }} />,
         },
         {
             title: "Angular",
-            description: "Angular es un robusto framework de JavaScript desarrollado por Google, diseñado para crear aplicaciones web dinámicas y escalables.",
+            description: "Es un robusto framework de JavaScript desarrollado por Google, diseñado para crear aplicaciones web dinámicas y escalables.",
             icon: <IoLogoAngular style={{ color: "#DD0031" }} />,
         }
     ];
