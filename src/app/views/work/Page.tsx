@@ -11,8 +11,8 @@ export default function WorkPage() {
             href: "https://www.clubhousepirque.cl/",
         },
         {
-            title: "Neydemar Martinez",
-            description: "Landing Page de Neydemar Martinez",
+            title: "Neydemar Martínez",
+            description: "Landing Page de Neydemar Martínez",
             imagen: "/images/ney.png",
             button: "Ver Demo",
             href: "https://www.neymartinez.com/",
