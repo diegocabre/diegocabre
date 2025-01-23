@@ -11,7 +11,7 @@ export const Footer = () => {
                 <aside className="flex justify-center md:justify-start relative">
                     <div className="relative group">
                         {/* Contorno brillante */}
-                        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-parrafo via-background to-titulo blur-md opacity-75 animate-pulse"></div>
+                        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-background via-background to-background blur-md opacity-75 animate-pulse"></div>
                         <Image
                             src="/images/logosf.png"
                             alt="Logo"
