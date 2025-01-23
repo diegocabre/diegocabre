@@ -32,11 +32,13 @@ export const FormContact = () => {
             body: JSON.stringify(formData),
         });
 
-        const result = await response.json();
 
         if (response.status === 200) {
             setStatus('Mensaje enviado con éxito');
             setFormData({ email: '', message: '' }); // Limpiar el formulario
+            setTimeout(() => {
+                setStatus('');
+            }, 3000);
         } else {
             setStatus('Error al enviar el mensaje');
         }
