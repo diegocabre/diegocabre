@@ -8,28 +8,40 @@ export default function WorkPage() {
             description: "Web para el Hotel Club House Pirque",
             imagen: "/images/pirque.png",
             button: "Ver Demo",
+            button1: "Ver Código",
             href: "https://www.clubhousepirque.cl/",
+            href1: "https://github.com/diegocabre/club-house-pirque",
+            skill: ["React1.svg", "Tailwind1.svg", "Next1.svg", "typescript.svg"],
         },
         {
             title: "Neydemar Martínez",
             description: "Landing Page de Neydemar Martínez",
             imagen: "/images/ney.png",
             button: "Ver Demo",
+            button1: "Ver Código",
             href: "https://www.neymartinez.com/",
+            href1: "https://github.com/diegocabre/neymartinez",
+            skill: ["React1.svg", "Tailwind1.svg", "Next1.svg", "typescript.svg"],
         },
         {
             title: "Pokedex",
             description: "Pokedex de Pokemon en Astro",
             imagen: "/images/Pokedex.png",
             button: "Ver Demo",
+            button1: "Ver Código",
             href: "https://pokedex-astro-solid.vercel.app/",
+            href1: "https://github.com/diegocabre/pokedex-Astro-Solid",
+            skill: ["Astro1.svg", "Tailwind1.svg", "typescript.svg"],
         },
         {
             title: "Gestión de Tickets",
             description: "Gestión de Tickets",
             imagen: "/images/gestion.png",
             button: "Ver Demo",
+            button1: "Ver Código",
             href: "https://gestion-tickets.vercel.app/",
+            href1: "https://github.com/diegocabre/Gestion-Tickets",
+            skill: ["javascript.svg"],
         },
     ];
 
@@ -54,7 +66,7 @@ export default function WorkPage() {
             </div>
 
             {/* Grid de Proyectos */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
                 {proyectos.map((proyecto, index) => (
                     <CardProjet
                         key={index}
@@ -62,7 +74,10 @@ export default function WorkPage() {
                         description={proyecto.description}
                         imagen={proyecto.imagen}
                         button={proyecto.button}
+                        button1={proyecto.button1}
                         href={proyecto.href}
+                        href1={proyecto.href1}
+                        skills={proyecto.skill}
                     />
                 ))}
             </div>
