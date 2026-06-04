@@ -10,14 +10,18 @@ export default {
   theme: {
   	extend: {
   		colors: {
-  			background: '#F4FAFF',
-  			letras: '#1F5673',
-  			titulo: '#3F0D12',
-  			subtitulo: '#1B998B',
-  			parrafo: '#7AC74F',
-
+  			background: '#090d16',
+  			letras: '#cbd5e1',
+  			titulo: '#f8fafc',
+  			subtitulo: '#818cf8',
+  			parrafo: '#94a3b8',
   		},	
   		fontFamily: {
+  			sans: [
+  				'Outfit',
+  				'Inter',
+  				'sans-serif'
+  			],
   			JetBrains: [
   				'JetBrains Mono',
   				'sans-serif'

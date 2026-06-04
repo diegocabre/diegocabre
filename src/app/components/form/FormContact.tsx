@@ -45,11 +45,13 @@ export const FormContact = () => {
     };
 
     return (
-        <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold mb-6">Contáctame</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                    <label className="block text-lg font-medium mb-2" htmlFor="email">
+        <div className="w-full p-8 bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl shadow-2xl space-y-6">
+            <h2 className="text-2xl font-extrabold text-white text-center tracking-tight mb-6">
+                Contáctame
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="space-y-2">
+                    <label className="block text-sm font-semibold text-slate-300" htmlFor="email">
                         Correo Electrónico
                     </label>
                     <input
@@ -58,14 +60,14 @@ export const FormContact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Tu correo electrónico"
+                        className="w-full p-3 bg-slate-950/60 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all font-sans"
+                        placeholder="ejemplo@correo.com"
                         required
                     />
                 </div>
 
-                <div className="mb-4">
-                    <label className="block text-lg font-medium mb-2" htmlFor="message">
+                <div className="space-y-2">
+                    <label className="block text-sm font-semibold text-slate-300" htmlFor="message">
                         Mensaje
                     </label>
                     <textarea
@@ -74,23 +76,34 @@ export const FormContact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         rows={4}
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Escribe tu mensaje"
+                        className="w-full p-3 bg-slate-950/60 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all font-sans"
+                        placeholder="Escribe tu mensaje aquí..."
                         required
                     />
                 </div>
 
-                <div className="text-center">
+                <div className="pt-2">
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition duration-300"
+                        disabled={status === 'Enviando...'}
+                        className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white p-3.5 rounded-xl font-bold tracking-wide shadow-lg hover:from-indigo-500 hover:to-violet-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-indigo-500/20 active:scale-[0.98]"
                     >
-                        Enviar
+                        {status === 'Enviando...' ? 'Enviando...' : 'Enviar Mensaje'}
                     </button>
                 </div>
             </form>
 
-            {status && <p className="mt-4 text-center">{status}</p>}
+            {status && (
+                <p className={`mt-4 text-center text-sm font-medium ${
+                    status.includes('éxito') 
+                        ? 'text-green-400' 
+                        : status.includes('Error') 
+                        ? 'text-red-400' 
+                        : 'text-indigo-400 animate-pulse'
+                }`}>
+                    {status}
+                </p>
+            )}
         </div>
     );
 };
