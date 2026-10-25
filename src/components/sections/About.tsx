@@ -39,7 +39,7 @@ export function About() {
                 <span
                   aria-hidden
                   className={`absolute top-1.5 -left-[5px] size-2.5 rounded-full border-2 border-bg ${
-                    i === timeline.length - 1 ? "bg-accent" : "bg-line"
+                    i === timeline.length - 1 ? "bg-accent neon" : "bg-line"
                   }`}
                 />
                 <p className="font-mono text-xs text-muted tabular-nums">{t.period}</p>

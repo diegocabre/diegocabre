@@ -53,7 +53,7 @@ function Role({ p }: { p: Project }) {
 
 function Shot({ p, sizes }: { p: Project; sizes: string }) {
   return (
-    <Tilt className="overflow-hidden rounded-2xl border border-line bg-surface transition-[border-color] duration-200 group-hover:border-accent/60">
+    <Tilt className="overflow-hidden rounded-2xl border border-line bg-surface transition-[border-color,box-shadow] duration-200 group-hover:border-accent/60 group-hover:neon">
       <Image
         src={p.image}
         alt={p.alt}
@@ -88,7 +88,7 @@ export function Projects() {
             <ul className="space-y-1.5 text-sm">
               {featured.highlights.map((h) => (
                 <li key={h} className="flex gap-2">
-                  <span aria-hidden className="mt-2 size-1 shrink-0 rounded-full bg-accent" />
+                  <span aria-hidden className="mt-2 size-1 shrink-0 rounded-full bg-accent neon" />
                   {h}
                 </li>
               ))}

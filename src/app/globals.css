@@ -11,18 +11,25 @@
   --muted: oklch(0.45 0.015 255);
   --accent: oklch(0.5 0.13 160);
   --accent-ink: oklch(0.99 0.01 160);
+  --glow: none;
   color-scheme: light;
 }
 
+/* Minimalista oscuro con acento neón: el brillo solo existe en este tema. */
 [data-theme="dark"] {
-  --bg: oklch(0.165 0.008 255);
-  --surface: oklch(0.205 0.01 255);
-  --line: oklch(0.3 0.012 255);
-  --text: oklch(0.95 0.004 255);
-  --muted: oklch(0.72 0.012 255);
-  --accent: oklch(0.82 0.16 158);
-  --accent-ink: oklch(0.2 0.03 160);
+  --bg: oklch(0.13 0.01 260);
+  --surface: oklch(0.17 0.012 260);
+  --line: oklch(0.27 0.015 260);
+  --text: oklch(0.96 0.005 260);
+  --muted: oklch(0.72 0.015 260);
+  --accent: oklch(0.88 0.23 152);
+  --accent-ink: oklch(0.16 0.04 152);
+  --glow: 0 0 28px -6px oklch(0.88 0.23 152 / 0.65);
   color-scheme: dark;
+}
+
+@utility neon {
+  box-shadow: var(--glow);
 }
 
 @theme inline {

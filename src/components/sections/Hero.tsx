@@ -28,7 +28,7 @@ export function Hero() {
           </p>
 
           <div className="hero-in mt-8 flex flex-wrap gap-3" style={{ "--d": 3 } as React.CSSProperties}>
-            <a href="#proyectos" className={`${btn} bg-accent text-accent-ink hover:brightness-110`}>
+            <a href="#proyectos" className={`${btn} neon bg-accent text-accent-ink hover:brightness-110`}>
               Ver proyectos
               <PiArrowDown className="size-4" />
             </a>

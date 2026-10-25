@@ -56,7 +56,7 @@ export function Header() {
               {l.label}
               <span
                 aria-hidden
-                className={`absolute inset-x-1.5 -bottom-px h-0.5 origin-left rounded-full bg-accent transition-transform duration-200 ease-out sm:inset-x-3 ${
+                className={`absolute inset-x-1.5 -bottom-px h-0.5 origin-left rounded-full bg-accent neon transition-transform duration-200 ease-out sm:inset-x-3 ${
                   active === l.id ? "scale-x-100" : "scale-x-0"
                 }`}
               />
