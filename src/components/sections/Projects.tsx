@@ -12,7 +12,7 @@ function Links({ p }: { p: Project }) {
         rel="noopener noreferrer"
         className="group/l inline-flex items-center gap-1 py-1 text-fg underline decoration-accent decoration-2 underline-offset-4"
       >
-        Ver sitio
+        Demo
         <PiArrowUpRight className="size-4 transition-transform duration-200 ease-out group-hover/l:translate-x-0.5 group-hover/l:-translate-y-0.5" />
         <span className="sr-only">de {p.name} (abre en otra pestaña)</span>
       </a>
@@ -39,6 +39,14 @@ function Tags({ items }: { items: string[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+function Role({ p }: { p: Project }) {
+  return (
+    <p className="text-sm text-muted">
+      Mi rol: <span className="text-fg">{p.role}</span>
+    </p>
   );
 }
 
@@ -75,6 +83,7 @@ export function Projects() {
           <div className="space-y-5 lg:col-span-5">
             <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">{featured.name}</h3>
             <p className="leading-relaxed text-muted">{featured.summary}</p>
+            <Role p={featured} />
             <ul className="space-y-1.5 text-sm">
               {featured.highlights.map((h) => (
                 <li key={h} className="flex gap-2">
@@ -97,6 +106,7 @@ export function Projects() {
               <div className="flex flex-1 flex-col gap-4">
                 <h3 className="text-xl font-semibold tracking-tight">{p.name}</h3>
                 <p className="leading-relaxed text-muted">{p.summary}</p>
+                <Role p={p} />
                 <p className="text-sm">{p.highlights.join(". ")}.</p>
                 <Tags items={p.stack} />
                 <div className="mt-auto pt-1">

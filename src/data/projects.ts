@@ -1,6 +1,7 @@
 export type Project = {
   name: string;
   summary: string;
+  role: string;
   highlights: string[];
   stack: string[];
   demo: string;
@@ -12,6 +13,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "Reservas Cabañas Sur",
+    role: "Full Stack, de punta a punta",
     summary:
       "Reserva directa para cabañas del sur de Chile: el huésped ve la disponibilidad, paga el abono con Mercado Pago y recibe su confirmación, sin comisiones de plataforma.",
     highlights: [
@@ -28,6 +30,7 @@ export const projects: Project[] = [
   },
   {
     name: "Estribor Consultores",
+    role: "Full Stack, de punta a punta",
     summary:
       "Sitio corporativo, portal de empleo y agenda de reuniones para una consultora chilena en gestión de personas, seguridad laboral y sostenibilidad.",
     highlights: [
@@ -43,6 +46,7 @@ export const projects: Project[] = [
   },
   {
     name: "Caroline Magic",
+    role: "Frontend y panel de administración",
     summary:
       "Catálogo de sesiones, rituales, academia y tienda, con reserva por WhatsApp en un clic y un panel privado para publicar la carta del día.",
     highlights: [
@@ -57,6 +61,7 @@ export const projects: Project[] = [
   },
   {
     name: "Dogtoralia Vet",
+    role: "Frontend",
     summary:
       "Sitio de una clínica veterinaria con dos sedes en Santiago: servicios, tienda vitrina y agenda por WhatsApp en un toque.",
     highlights: [
@@ -71,6 +76,7 @@ export const projects: Project[] = [
   },
   {
     name: "Soluciones DyS",
+    role: "Full Stack, sitio propio",
     summary: "Sitio de mi empresa: sitios web a medida para pymes de Puerto Varas, Los Lagos y todo Chile.",
     highlights: [
       "Blog en MDX con RSS y caché en Redis",
