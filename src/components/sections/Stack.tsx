@@ -7,7 +7,7 @@ export function Stack() {
         <h2 id="stack-title" className="text-sm font-medium text-muted">
           Con qué trabajo
         </h2>
-        <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {stack.map((g) => (
             <div key={g.group}>
               <h3 className="font-semibold tracking-tight">{g.group}</h3>
