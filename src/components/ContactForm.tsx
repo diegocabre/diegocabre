@@ -77,7 +77,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full rounded-[10px] bg-accent px-5 py-3 font-medium text-accent-ink transition-[filter,transform] duration-150 ease-out hover:brightness-110 active:scale-[0.98] disabled:cursor-wait disabled:opacity-70"
+        className="neon w-full rounded-[10px] bg-accent px-5 py-3 font-medium text-accent-ink transition-[filter,transform] duration-150 ease-out hover:brightness-110 active:scale-[0.98] disabled:cursor-wait disabled:opacity-70"
       >
         {status === "sending" ? "Enviando..." : "Enviar mensaje"}
       </button>

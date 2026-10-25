@@ -53,7 +53,7 @@ function Role({ p }: { p: Project }) {
 
 function Shot({ p, sizes }: { p: Project; sizes: string }) {
   return (
-    <Tilt className="overflow-hidden rounded-2xl border border-line bg-surface transition-[border-color] duration-200 group-hover:border-accent/60">
+    <Tilt className="overflow-hidden rounded-2xl border border-line bg-surface transition-[border-color,box-shadow] duration-200 group-hover:border-accent/60 group-hover:neon">
       <Image
         src={p.image}
         alt={p.alt}
@@ -73,7 +73,7 @@ export function Projects() {
     <section id="proyectos" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:py-32">
       <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-4xl">Proyectos en producción</h2>
       <p className="mt-3 max-w-[60ch] text-muted">
-        Cinco sistemas que hoy usan clientes reales. Cada uno con su código público en GitHub.
+        Cinco sistemas que hoy usan clientes reales, cada uno con su código abierto en GitHub.
       </p>
 
       <Reveal className="mt-14">
@@ -88,7 +88,7 @@ export function Projects() {
             <ul className="space-y-1.5 text-sm">
               {featured.highlights.map((h) => (
                 <li key={h} className="flex gap-2">
-                  <span aria-hidden className="mt-2 size-1 shrink-0 rounded-full bg-accent" />
+                  <span aria-hidden className="mt-2 size-1 shrink-0 rounded-full bg-accent neon" />
                   {h}
                 </li>
               ))}

@@ -23,12 +23,12 @@ export function Hero() {
             className="hero-in mt-6 max-w-[46ch] text-lg leading-relaxed text-muted"
             style={{ "--d": 2 } as React.CSSProperties}
           >
-            <span className="text-fg">{site.motto}.</span> Construyo aplicaciones con React, Next.js, Node y PostgreSQL
-            que hoy funcionan en producción.
+            <span className="text-fg">{site.motto}.</span> Desarrollo aplicaciones con React, Next.js, Node y PostgreSQL:
+            cinco ya funcionan en producción para empresas chilenas.
           </p>
 
           <div className="hero-in mt-8 flex flex-wrap gap-3" style={{ "--d": 3 } as React.CSSProperties}>
-            <a href="#proyectos" className={`${btn} bg-accent text-accent-ink hover:brightness-110`}>
+            <a href="#proyectos" className={`${btn} neon bg-accent text-accent-ink hover:brightness-110`}>
               Ver proyectos
               <PiArrowDown className="size-4" />
             </a>

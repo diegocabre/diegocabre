@@ -16,23 +16,23 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 80,
-          background: "#14171c",
-          color: "#eef0f3",
+          background: "#05070b",
+          color: "#f0f2f5",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 28, color: "#9aa3ae" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 28, color: "#9fa5ae" }}>
           <svg width="72" height="72" viewBox="0 0 40 40">
-            <path d="M10 30V20q0-8 8-8h11" fill="none" stroke="#eef0f3" strokeWidth="4" strokeLinecap="round" />
-            <circle cx="10" cy="30" r="5.5" fill="#eef0f3" />
-            <circle cx="30" cy="12" r="5.5" fill="#5ee0a0" />
+            <path d="M10 30V20q0-8 8-8h11" fill="none" stroke="#f0f2f5" strokeWidth="4" strokeLinecap="round" />
+            <circle cx="10" cy="30" r="5.5" fill="#f0f2f5" />
+            <circle cx="30" cy="12" r="5.5" fill="#0dff86" />
           </svg>
           Disponible para trabajar
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 96, fontWeight: 700, letterSpacing: -4 }}>{site.name}</div>
-          <div style={{ fontSize: 56, color: "#9aa3ae", letterSpacing: -2 }}>{site.role}</div>
+          <div style={{ fontSize: 56, color: "#9fa5ae", letterSpacing: -2 }}>{site.role}</div>
         </div>
-        <div style={{ display: "flex", fontSize: 30, color: "#5ee0a0" }}>{site.motto}</div>
+        <div style={{ display: "flex", fontSize: 30, color: "#0dff86" }}>{site.motto}</div>
       </div>
     ),
     size,
