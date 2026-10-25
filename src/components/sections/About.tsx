@@ -18,13 +18,14 @@ export function About() {
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Sobre mí</h2>
           <div className="mt-6 max-w-[60ch] space-y-4 text-lg leading-relaxed text-muted">
             <p>
-              Soy desarrollador full stack, con formación en Informática y el bootcamp Fullstack JavaScript de Desafío
-              Latam. Hoy diseño, construyo y mantengo sitios y sistemas para pymes chilenas, desde la base de datos hasta
-              el despliegue.
+              Soy desarrollador full stack en Puerto Varas, Chile, y trabajo 100% remoto. Desde 2025 tomo proyectos de
+              punta a punta para empresas chilenas: levanto requerimientos, diseño la solución, la construyo con Next.js,
+              Node.js y PostgreSQL, la pruebo y la mantengo en producción.
             </p>
             <p>
-              Me importa que lo que entrego funcione: tipado estricto, validación en el servidor, pruebas y
-              documentación. Busco sumarme a un equipo donde seguir creciendo como{" "}
+              Antes trabajé más de 15 años en ventas consultivas B2B y Business Intelligence, así que hablo el idioma del
+              negocio y lo traduzco en funcionalidades. Uso IA a diario como herramienta de desarrollo (certificado
+              Claude Code in Action, Anthropic) y busco sumarme a un equipo donde seguir creciendo como{" "}
               <span className="text-fg">Full Stack Developer</span>.
             </p>
           </div>
@@ -41,7 +42,8 @@ export function About() {
                     i === timeline.length - 1 ? "bg-accent" : "bg-line"
                   }`}
                 />
-                <p className="font-semibold tracking-tight">{t.title}</p>
+                <p className="font-mono text-xs text-muted tabular-nums">{t.period}</p>
+                <p className="mt-1 font-semibold tracking-tight">{t.title}</p>
                 <p className="mt-1 text-muted">{t.body}</p>
               </li>
             ))}

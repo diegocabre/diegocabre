@@ -14,7 +14,12 @@ export const projects: Project[] = [
     name: "Reservas Cabañas Sur",
     summary:
       "Reserva directa para cabañas del sur de Chile: el huésped ve la disponibilidad, paga el abono con Mercado Pago y recibe su confirmación, sin comisiones de plataforma.",
-    highlights: ["Pagos con Mercado Pago", "PostgreSQL con Prisma", "Tests con Vitest"],
+    highlights: [
+      "Pago del abono con Mercado Pago, verificado contra la API e idempotente",
+      "PostgreSQL con restricción de exclusión y bloqueo transaccional contra dobles reservas",
+      "Row Level Security multi-propiedad, login por link mágico y expiración con Vercel Cron",
+      "Pruebas con Vitest",
+    ],
     stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Supabase", "Mercado Pago", "Resend", "Zod", "Vitest"],
     demo: "https://reservas.solucionesdys.cl",
     repo: "https://github.com/diegocabre/reservas-cabanas",
@@ -25,7 +30,11 @@ export const projects: Project[] = [
     name: "Estribor Consultores",
     summary:
       "Sitio corporativo, portal de empleo y agenda de reuniones para una consultora chilena en gestión de personas, seguridad laboral y sostenibilidad.",
-    highlights: ["Supabase: Postgres, Auth y Storage", "Tests E2E con Playwright"],
+    highlights: [
+      "Vacantes con ISR y datos estructurados para Google for Jobs",
+      "Panel con roles admin y reclutador, postulación con CV validado y exportación a Excel",
+      "Pruebas de API y E2E con Playwright",
+    ],
     stack: ["Next.js", "TypeScript", "Supabase", "Zod", "Vitest", "Playwright"],
     demo: "https://www.estriborconsultores.cl",
     repo: "https://github.com/diegocabre/estribor",
@@ -36,7 +45,10 @@ export const projects: Project[] = [
     name: "Caroline Magic",
     summary:
       "Catálogo de sesiones, rituales, academia y tienda, con reserva por WhatsApp en un clic y un panel privado para publicar la carta del día.",
-    highlights: ["Panel privado de administración", "Privacidad según Ley 19.628 y 21.719"],
+    highlights: [
+      "Panel privado con sesión firmada y límite de intentos de login",
+      "Imágenes en Vercel Blob y CSP con nonce",
+    ],
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     demo: "https://www.carolinemagic.cl",
     repo: "https://github.com/diegocabre/carolinemagic",
@@ -47,7 +59,10 @@ export const projects: Project[] = [
     name: "Dogtoralia Vet",
     summary:
       "Sitio de una clínica veterinaria con dos sedes en Santiago: servicios, tienda vitrina y agenda por WhatsApp en un toque.",
-    highlights: ["Validación con Zod", "Correos con Resend"],
+    highlights: [
+      "Tienda vitrina de 108 productos con búsqueda y filtros",
+      "Formulario validado con rate limiting y SEO con JSON-LD",
+    ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zod", "Resend"],
     demo: "https://www.dogtoraliavet.cl/home",
     repo: "https://github.com/diegocabre/dogtoralia",
@@ -57,8 +72,11 @@ export const projects: Project[] = [
   {
     name: "Soluciones DyS",
     summary: "Sitio de mi empresa: sitios web a medida para pymes de Puerto Varas, Los Lagos y todo Chile.",
-    highlights: ["Tests con Vitest", "Formulario con Resend"],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend", "Vitest"],
+    highlights: [
+      "Blog en MDX con RSS y caché en Redis",
+      "Formulario protegido contra bots e integración continua con GitHub Actions",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "MDX", "Redis", "Supabase", "Vitest"],
     demo: "https://www.solucionesdys.cl",
     repo: "https://github.com/diegocabre/solucionesdys",
     image: "/images/projects/solucionesdys.jpg",

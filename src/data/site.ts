@@ -6,28 +6,37 @@ export const site = {
   email: "diegocabre@gmail.com",
   github: "https://github.com/diegocabre",
   linkedin: "https://www.linkedin.com/in/diegoantoniocabreperrone/",
-  // Cuando exista, poner la ruta del PDF en public/ (ej. "/cv-diego-cabre.pdf") y aparece el botón.
-  cv: null as string | null,
+  cv: "/cv-diego-cabre.pdf" as string | null,
   // Cuando exista, poner la foto en public/images/ (ej. "/images/diego.jpg") y aparece en "Sobre mí".
   photo: null as string | null,
 };
 
 export const stack = [
-  { group: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "React Native"] },
-  { group: "Backend", items: ["Node.js", "Route Handlers y Server Actions", "Zod", "Resend"] },
-  { group: "Datos", items: ["PostgreSQL", "Supabase", "Prisma"] },
-  { group: "Calidad y entrega", items: ["Vitest", "Playwright", "Git y GitHub", "Vercel"] },
+  { group: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
+  { group: "Backend", items: ["Node.js", "Express y APIs REST", "Zod", "Mercado Pago y Resend"] },
+  { group: "Datos", items: ["PostgreSQL", "Prisma", "Supabase", "Redis (Upstash)"] },
+  { group: "Calidad y entrega", items: ["Vitest", "Playwright", "GitHub Actions", "Vercel"] },
 ];
 
-// TODO(Diego): agregar años a cada hito si quieres mostrarlos.
 export const timeline = [
-  { title: "Formación en Informática", body: "Bases de programación, redes y bases de datos." },
   {
-    title: "Bootcamp Fullstack JavaScript, Desafío Latam",
-    body: "React, Node.js, Express y PostgreSQL con proyectos semanales.",
+    period: "2000-2005",
+    title: "Técnico Superior Universitario en Informática",
+    body: "Instituto Universitario de Tecnología Antonio José de Sucre, Venezuela.",
   },
   {
-    title: "Soluciones DyS",
-    body: "Sitios y sistemas en producción para pymes de Los Lagos y todo Chile.",
+    period: "2009-2026",
+    title: "Soporte TI, ventas B2B y Business Intelligence",
+    body: "Soporte a usuarios y redes, luego jefaturas comerciales en Würth, Construmart e Imperial con reportes y tableros de decisión sobre SAP.",
+  },
+  {
+    period: "2023-2024",
+    title: "Bootcamp Full Stack JavaScript, Desafío Latam",
+    body: "410 horas de React, Node.js, Express y PostgreSQL.",
+  },
+  {
+    period: "2025-hoy",
+    title: "Desarrollador web freelance, Soluciones DyS",
+    body: "Sitios y aplicaciones para pymes de punta a punta: requerimientos, diseño, desarrollo, despliegue y mantención.",
   },
 ];
