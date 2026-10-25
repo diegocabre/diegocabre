@@ -1,41 +1,42 @@
-import { NavBar } from "./components";
-import { Footer } from "./components/footer/Footer";
-import AboutPage from "./views/about/Page";
-import ContactPage from "./views/contact/Page";
-import HomePage from "./views/home/Page";
-import WorkPage from "./views/work/Page";
+import { Header } from "@/components/Header";
+import { About } from "@/components/sections/About";
+import { Contact } from "@/components/sections/Contact";
+import { Footer } from "@/components/sections/Footer";
+import { Hero } from "@/components/sections/Hero";
+import { Projects } from "@/components/sections/Projects";
+import { Stack } from "@/components/sections/Stack";
+import { site } from "@/data/site";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: site.role,
+  url: site.url,
+  email: `mailto:${site.email}`,
+  sameAs: [site.github, site.linkedin],
+  knowsAbout: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
+};
 
 export default function Page() {
   return (
     <>
-      <NavBar />
-      <div className="ml-0 md:ml-48 pt-16 md:pt-0 min-h-screen flex flex-col justify-between">
-        <div className="flex-grow">
-          {/* Inicio */}
-          <section className="min-h-screen bg-background flex flex-col justify-center" id="Inicio">
-            <HomePage />
-          </section>
-
-          {/* Quien Soy */}
-          <section className="relative min-h-screen flex flex-col justify-center" id="Quien Soy">
-            <AboutPage />
-          </section>
-
-          {/* Proyectos */}
-          <section className="min-h-screen bg-background flex flex-col justify-center" id="Proyectos">
-            <WorkPage />
-          </section>
-
-          {/* Contacto */}
-          <section className="min-h-screen bg-background flex items-center justify-center relative overflow-hidden px-4 py-20" id="Contacto">
-            {/* Background Glow */}
-            <div className="absolute bottom-10 right-10 w-[300px] h-[300px] rounded-full bg-indigo-500/5 blur-[80px] pointer-events-none"></div>
-            <ContactPage />
-          </section>
-        </div>
-
-        <Footer />
-      </div>
+      <a
+        href="#proyectos"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-[10px] focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-ink"
+      >
+        Saltar a proyectos
+      </a>
+      <Header />
+      <main>
+        <Hero />
+        <Stack />
+        <Projects />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
     </>
   );
 }

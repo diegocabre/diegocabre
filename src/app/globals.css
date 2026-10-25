@@ -1,31 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Radios: tarjetas e imágenes 16px (rounded-2xl), botones e inputs 10px (rounded-[10px]). */
+:root {
+  --bg: oklch(0.985 0.002 250);
+  --surface: oklch(0.955 0.004 250);
+  --line: oklch(0.885 0.006 250);
+  --text: oklch(0.22 0.015 255);
+  --muted: oklch(0.45 0.015 255);
+  --accent: oklch(0.5 0.13 160);
+  --accent-ink: oklch(0.99 0.01 160);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: oklch(0.165 0.008 255);
+  --surface: oklch(0.205 0.01 255);
+  --line: oklch(0.3 0.012 255);
+  --text: oklch(0.95 0.004 255);
+  --muted: oklch(0.72 0.012 255);
+  --accent: oklch(0.82 0.16 158);
+  --accent-ink: oklch(0.2 0.03 160);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* ease-out por defecto de Tailwind es débil; esta curva da respuesta inmediata. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  scrollbar-color: var(--line) var(--bg);
+  caret-color: var(--accent);
+}
 
 body {
-  @apply bg-background text-letras font-sans antialiased;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
 }
 
-.step .step-primary {
-  @apply text-letras;
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
-/* Custom 3D Flip Card Utilities */
-.perspective-1000 {
-  perspective: 1000px;
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
-.preserve-3d {
-  transform-style: preserve-3d;
+/* Entrada del hero y aparición al hacer scroll. Sin JS todo queda visible. */
+.hero-in {
+  animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--d, 0) * 70ms);
 }
 
-.backface-hidden {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
 
-.rotate-y-180 {
-  transform: rotateY(180deg);
+.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--d, 0) * 70ms);
 }
 
+.js .reveal[data-visible] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-in {
+    animation: none;
+  }
+  /* Movimiento reducido: se conserva el fundido, sin desplazamiento. */
+  .js .reveal {
+    transform: none;
+    transition: opacity 0.3s ease;
+  }
+}
