@@ -15,7 +15,8 @@ export const stack = [
   { group: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
   { group: "Backend", items: ["Node.js", "Express y APIs REST", "Zod", "Mercado Pago y Resend"] },
   { group: "Datos", items: ["PostgreSQL", "Prisma", "Supabase", "Redis (Upstash)"] },
-  { group: "Calidad y entrega", items: ["Vitest", "Playwright", "GitHub Actions", "Vercel"] },
+  { group: "Cloud y deploy", items: ["Vercel", "Vercel Blob y Cron", "GitHub Actions", "Cloudflare Turnstile"] },
+  { group: "Herramientas", items: ["Git y GitHub", "Vitest", "Playwright", "ESLint", "Claude Code"] },
 ];
 
 export const timeline = [

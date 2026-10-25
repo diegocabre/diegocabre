@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PiArrowUpRight, PiGithubLogo } from "react-icons/pi";
 import { Reveal } from "@/components/Reveal";
+import { Tilt } from "@/components/Tilt";
 import { projects, type Project } from "@/data/projects";
 
 function Links({ p }: { p: Project }) {
@@ -12,7 +13,7 @@ function Links({ p }: { p: Project }) {
         rel="noopener noreferrer"
         className="group/l inline-flex items-center gap-1 py-1 text-fg underline decoration-accent decoration-2 underline-offset-4"
       >
-        Ver sitio
+        Demo
         <PiArrowUpRight className="size-4 transition-transform duration-200 ease-out group-hover/l:translate-x-0.5 group-hover/l:-translate-y-0.5" />
         <span className="sr-only">de {p.name} (abre en otra pestaña)</span>
       </a>
@@ -42,9 +43,17 @@ function Tags({ items }: { items: string[] }) {
   );
 }
 
+function Role({ p }: { p: Project }) {
+  return (
+    <p className="text-sm text-muted">
+      Mi rol: <span className="text-fg">{p.role}</span>
+    </p>
+  );
+}
+
 function Shot({ p, sizes }: { p: Project; sizes: string }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-line bg-surface">
+    <Tilt className="overflow-hidden rounded-2xl border border-line bg-surface transition-[border-color] duration-200 group-hover:border-accent/60">
       <Image
         src={p.image}
         alt={p.alt}
@@ -53,7 +62,7 @@ function Shot({ p, sizes }: { p: Project; sizes: string }) {
         sizes={sizes}
         className="h-auto w-full transition-transform duration-300 ease-out group-hover:scale-[1.02]"
       />
-    </div>
+    </Tilt>
   );
 }
 
@@ -75,6 +84,7 @@ export function Projects() {
           <div className="space-y-5 lg:col-span-5">
             <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">{featured.name}</h3>
             <p className="leading-relaxed text-muted">{featured.summary}</p>
+            <Role p={featured} />
             <ul className="space-y-1.5 text-sm">
               {featured.highlights.map((h) => (
                 <li key={h} className="flex gap-2">
@@ -97,6 +107,7 @@ export function Projects() {
               <div className="flex flex-1 flex-col gap-4">
                 <h3 className="text-xl font-semibold tracking-tight">{p.name}</h3>
                 <p className="leading-relaxed text-muted">{p.summary}</p>
+                <Role p={p} />
                 <p className="text-sm">{p.highlights.join(". ")}.</p>
                 <Tags items={p.stack} />
                 <div className="mt-auto pt-1">

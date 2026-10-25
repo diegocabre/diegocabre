@@ -26,11 +26,11 @@ export const metadata: Metadata = {
 };
 
 // Fija el tema antes del primer pintado para evitar el parpadeo.
-const themeScript = `(()=>{const d=document.documentElement;d.classList.add('js');let t;try{t=localStorage.getItem('theme')}catch(e){}d.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')})()`;
+const themeScript = `(()=>{const d=document.documentElement;let t;try{t=localStorage.getItem('theme')}catch(e){}d.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')})()`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="es-CL" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

@@ -4,6 +4,24 @@
 > Objetivo: portfolio de **Full Stack Developer Jr.** (React · Next.js · TypeScript · Node · PostgreSQL) bajo el lema **"Conectando Innovación con Confiabilidad"**.
 > Fase 1: solo diagnóstico. No se modificó código.
 
+## Estado al 2026-10-25 (después de la fase 2)
+
+Publicado en [diegocabre.vercel.app](https://diegocabre.vercel.app) (PR #3) y ajustes finales en la rama `redesign`.
+
+| Hallazgo | Estado |
+|---|---|
+| C1 `homepageUrl` apuntando a un portfolio ajeno | ✅ Corregido (también el de `dogtoralia`) |
+| C2 Proyecto Neydemar caído | ✅ Retirado |
+| C3 Video de 55 MB | ✅ Fuera del sitio. Sigue en el historial de git por decisión explícita |
+| C4 `next` con advisory crítico | ✅ Next 16.4, 0 vulnerabilidades en producción |
+| C5 Lint roto | ✅ ESLint con flat config nativa |
+| C6 Posicionamiento y copy | ✅ Hero Full Stack Developer Jr. con lema, CV, GitHub y LinkedIn |
+| API de contacto (validación, spoofing, nodemailer) | ✅ Zod, honeypot, `replyTo`, envío con Resend. Sin rate limit (anotado en el código) |
+| Accesibilidad, rendimiento y SEO | ✅ Lighthouse en producción: móvil 97/100/100/100, escritorio 100/100/100/100 |
+| Deuda técnica (DaisyUI, deps y assets sin uso, estructura) | ✅ Eliminada |
+| Foto profesional | ⏳ Pendiente (Diego) |
+| Fijar repos destacados y archivar ejercicios en GitHub | ⏳ Pendiente (Diego) |
+
 ---
 
 ## 0. Resumen ejecutivo

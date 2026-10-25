@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { m } from "motion/react";
 
 export function Reveal({
   children,
@@ -11,27 +11,15 @@ export function Reveal({
   delay?: number;
   className?: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        // Con scroll rápido llegan varias entradas en un lote; también mostramos lo que ya quedó arriba.
-        if (!entries.some((e) => e.isIntersecting || e.boundingClientRect.top < 0)) return;
-        el.dataset.visible = "";
-        io.disconnect();
-      },
-      { rootMargin: "0px 0px -10% 0px" },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
   return (
-    <div ref={ref} className={`reveal ${className}`} style={{ "--d": delay } as React.CSSProperties}>
+    <m.div
+      className={className}
+      initial={{ opacity: 0, y: 14 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+      transition={{ duration: 0.6, delay: delay * 0.07, ease: [0.16, 1, 0.3, 1] }}
+    >
       {children}
-    </div>
+    </m.div>
   );
 }

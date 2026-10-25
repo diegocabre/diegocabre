@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { MotionProvider } from "@/components/MotionProvider";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
@@ -27,15 +28,17 @@ export default function Page() {
       >
         Saltar a proyectos
       </a>
-      <Header />
-      <main>
-        <Hero />
-        <Stack />
-        <Projects />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
+      <MotionProvider>
+        <Header />
+        <main>
+          <Hero />
+          <Stack />
+          <Projects />
+          <About />
+          <Contact />
+        </main>
+        <Footer />
+      </MotionProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
     </>
   );
