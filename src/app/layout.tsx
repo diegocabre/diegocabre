@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 // Fija el tema antes del primer pintado para evitar el parpadeo.
-const themeScript = `(()=>{const d=document.documentElement;d.classList.add('js');let t;try{t=localStorage.getItem('theme')}catch(e){}d.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')})()`;
+const themeScript = `(()=>{const d=document.documentElement;let t;try{t=localStorage.getItem('theme')}catch(e){}d.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')})()`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PiArrowUpRight, PiGithubLogo } from "react-icons/pi";
 import { Reveal } from "@/components/Reveal";
+import { Tilt } from "@/components/Tilt";
 import { projects, type Project } from "@/data/projects";
 
 function Links({ p }: { p: Project }) {
@@ -52,7 +53,7 @@ function Role({ p }: { p: Project }) {
 
 function Shot({ p, sizes }: { p: Project; sizes: string }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-line bg-surface">
+    <Tilt className="overflow-hidden rounded-2xl border border-line bg-surface transition-[border-color] duration-200 group-hover:border-accent/60">
       <Image
         src={p.image}
         alt={p.alt}
@@ -61,7 +62,7 @@ function Shot({ p, sizes }: { p: Project; sizes: string }) {
         sizes={sizes}
         className="h-auto w-full transition-transform duration-300 ease-out group-hover:scale-[1.02]"
       />
-    </div>
+    </Tilt>
   );
 }
 
