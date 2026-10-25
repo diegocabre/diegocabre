@@ -1,21 +1,47 @@
-# 💫 About Me:
-# 👋 Hola, soy Diego Cabré<br>**Fullstack Developer Jr.** — React · Next.js · TypeScript · Node · PostgreSQL<br>*“Conectando Innovación con Confiabilidad”*
+<img src="brand/logo-avatar-oscuro.png" alt="" width="72" align="left" />
 
+# Diego Cabré
 
-# 💻 Tech Stack:
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=diegocabre&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=diegocabre&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=diegocabre&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+**Full Stack Developer Jr.** · React · Next.js · TypeScript · Node.js · PostgreSQL
+*Conectando innovación con confiabilidad.*
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=diegocabre&theme=dracula&no-frame=false&no-bg=false&margin-w=4)
+[Portfolio](https://diegocabre.vercel.app) · [Descargar CV](https://diegocabre.vercel.app/cv-diego-cabre.pdf) · [LinkedIn](https://www.linkedin.com/in/diegoantoniocabreperrone/) · diegocabre@gmail.com
 
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=diegocabre&limit=5&theme=dark&combine_all_yearly_contributions=true)
+Desarrollador full stack en Puerto Varas, Chile (100% remoto). Desde 2025 construyo sitios y aplicaciones para empresas chilenas de punta a punta: requerimientos, diseño, desarrollo, pruebas y mantención en producción. Antes, más de 15 años en ventas consultivas B2B y Business Intelligence.
+
+## Proyectos en producción
+
+| Proyecto | Qué resuelve | Stack |
+|---|---|---|
+| [Reservas Cabañas Sur](https://reservas.solucionesdys.cl) · [código](https://github.com/diegocabre/reservas-cabanas) | Reserva directa de cabañas con pago del abono en Mercado Pago, sin comisiones de plataforma | Next.js, Prisma, PostgreSQL, Supabase, Vitest |
+| [Estribor Consultores](https://www.estriborconsultores.cl) · [código](https://github.com/diegocabre/estribor) | Sitio corporativo, portal de empleo con panel por roles y agenda de reuniones | Next.js, Supabase, Zod, Playwright |
+| [Caroline Magic](https://www.carolinemagic.cl) · [código](https://github.com/diegocabre/carolinemagic) | Catálogo con reserva por WhatsApp y panel privado de contenido | Next.js, TypeScript, Vercel Blob |
+| [Dogtoralia Vet](https://www.dogtoraliavet.cl/home) · [código](https://github.com/diegocabre/dogtoralia) | Clínica veterinaria con dos sedes y tienda vitrina de 108 productos | Next.js, Zod, Resend |
+| [Soluciones DyS](https://www.solucionesdys.cl) · [código](https://github.com/diegocabre/solucionesdys) | Sitio propio con blog en MDX, caché en Redis y CI en GitHub Actions | Next.js, Redis, Supabase, Vitest |
+
+## Stack
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-20232a?logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-404d59?logo=express&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white) ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?logo=vitest&logoColor=white) ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
+
+![Estadísticas de GitHub](https://github-readme-stats.vercel.app/api?username=diegocabre&theme=dark&hide_border=true&include_all_commits=true&count_private=true)
 
 ---
-[![](https://visitcount.itsvg.in/api?id=diegocabre&icon=5&color=1)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## Sobre este repositorio
+
+Código del portfolio publicado en [diegocabre.vercel.app](https://diegocabre.vercel.app).
+
+**Tecnologías:** Next.js 16 (App Router), React 19, TypeScript estricto, Tailwind CSS 4, `motion`, Resend y Zod.
+
+```bash
+npm install
+cp .env.example .env   # completar RESEND_API_KEY y EMAIL_TO
+npm run dev
+```
+
+| Ruta | Contenido |
+|---|---|
+| `src/data/` | Datos tipados del sitio, stack, trayectoria y proyectos |
+| `src/components/sections/` | Secciones de la página (hero, stack, proyectos, sobre mí, contacto) |
+| `src/app/api/sendEmail/` | API del formulario de contacto (Zod, honeypot, Resend) |
+| `brand/` | Logo en PNG para fotos de perfil |
