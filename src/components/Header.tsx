@@ -45,18 +45,18 @@ export function Header() {
           <span className="hidden sm:inline">{site.name}</span>
         </a>
 
-        <nav aria-label="Secciones" className="flex items-center gap-1 sm:gap-2">
+        <nav aria-label="Secciones" className="flex items-center sm:gap-2">
           {links.map((l) => (
             <a
               key={l.id}
               href={`#${l.id}`}
               aria-current={active === l.id ? "true" : undefined}
-              className="relative rounded-[10px] px-2 py-2 text-sm text-muted transition-colors duration-200 hover:text-fg aria-[current]:text-fg sm:px-3"
+              className="relative rounded-[10px] px-1.5 py-2 text-[13px] whitespace-nowrap text-muted transition-colors duration-200 hover:text-fg aria-[current]:text-fg sm:px-3 sm:text-sm"
             >
               {l.label}
               <span
                 aria-hidden
-                className={`absolute inset-x-2 -bottom-px h-0.5 origin-left rounded-full bg-accent transition-transform duration-200 ease-out sm:inset-x-3 ${
+                className={`absolute inset-x-1.5 -bottom-px h-0.5 origin-left rounded-full bg-accent transition-transform duration-200 ease-out sm:inset-x-3 ${
                   active === l.id ? "scale-x-100" : "scale-x-0"
                 }`}
               />
