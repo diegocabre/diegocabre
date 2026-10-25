@@ -1,23 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { z } from "zod";
 
-const EMAIL_RE = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/;
+const INVALID_EMAIL = "Ingresa un correo válido.";
+const INVALID_MESSAGE = "El mensaje debe tener entre 10 y 5000 caracteres.";
+
+const ContactSchema = z.object(
+  {
+    email: z
+      .string({ error: INVALID_EMAIL })
+      .trim()
+      .max(254, { error: INVALID_EMAIL })
+      .pipe(z.email({ error: INVALID_EMAIL })),
+    message: z
+      .string({ error: INVALID_MESSAGE })
+      .trim()
+      .min(10, { error: INVALID_MESSAGE })
+      .max(5000, { error: INVALID_MESSAGE }),
+    website: z.string().optional(),
+  },
+  { error: "Datos inválidos." },
+);
 
 // shortcut: sin rate limit (en serverless la memoria no persiste); si llega spam, agregar Vercel Firewall o Upstash.
 export async function POST(req: NextRequest) {
-  const body = await req.json().catch(() => null);
-  const email = typeof body?.email === "string" ? body.email.trim() : "";
-  const message = typeof body?.message === "string" ? body.message.trim() : "";
+  const parsed = ContactSchema.safeParse(await req.json().catch(() => null));
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error.issues[0].message }, { status: 400 });
+  }
+  const { email, message, website } = parsed.data;
 
   // Honeypot lleno: respondemos OK para no darle pistas al bot.
-  if (body?.website) return NextResponse.json({ message: "ok" });
-
-  if (!EMAIL_RE.test(email) || email.length > 254) {
-    return NextResponse.json({ error: "Ingresa un correo válido." }, { status: 400 });
-  }
-  if (message.length < 10 || message.length > 5000) {
-    return NextResponse.json({ error: "El mensaje debe tener entre 10 y 5000 caracteres." }, { status: 400 });
-  }
+  if (website) return NextResponse.json({ message: "ok" });
 
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
