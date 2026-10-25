@@ -30,7 +30,7 @@ const themeScript = `(()=>{const d=document.documentElement;d.classList.add('js'
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="es-CL" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

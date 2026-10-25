@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { PiArrowDown, PiDownloadSimple, PiGithubLogo } from "react-icons/pi";
+import { PiArrowDown, PiDownloadSimple, PiGithubLogo, PiLinkedinLogo } from "react-icons/pi";
 import { site } from "@/data/site";
 
 const btn =
   "inline-flex items-center gap-2 rounded-[10px] px-5 py-3 text-sm font-medium transition-[background-color,border-color,transform] duration-150 ease-out active:scale-[0.97]";
+const link = "inline-flex items-center gap-1.5 py-1 transition-colors hover:text-fg";
 
 export function Hero() {
   return (
@@ -31,22 +32,36 @@ export function Hero() {
               Ver proyectos
               <PiArrowDown className="size-4" />
             </a>
-            {site.cv && (
-              <a href={site.cv} download className={`${btn} border border-line hover:border-fg/40`}>
-                <PiDownloadSimple className="size-4" />
-                Descargar CV
-              </a>
-            )}
-            <a
-              href={site.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${btn} border border-line hover:border-fg/40`}
-            >
-              <PiGithubLogo className="size-4" />
-              GitHub
+            <a href="#contacto" className={`${btn} border border-line hover:border-fg/40`}>
+              Contacto
             </a>
           </div>
+
+          <ul
+            className="hero-in mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted"
+            style={{ "--d": 4 } as React.CSSProperties}
+          >
+            <li>
+              <a href={site.github} target="_blank" rel="noopener noreferrer" className={link}>
+                <PiGithubLogo className="size-4" aria-hidden />
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className={link}>
+                <PiLinkedinLogo className="size-4" aria-hidden />
+                LinkedIn
+              </a>
+            </li>
+            {site.cv && (
+              <li>
+                <a href={site.cv} download className={link}>
+                  <PiDownloadSimple className="size-4" aria-hidden />
+                  Descargar CV
+                </a>
+              </li>
+            )}
+          </ul>
         </div>
 
         <div className="relative lg:col-span-6">
