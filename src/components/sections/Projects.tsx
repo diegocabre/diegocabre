@@ -73,7 +73,7 @@ export function Projects() {
     <section id="proyectos" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:py-32">
       <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-4xl">Proyectos en producción</h2>
       <p className="mt-3 max-w-[60ch] text-muted">
-        Cinco sistemas que hoy usan clientes reales. Cada uno con su código público en GitHub.
+        Cinco sistemas que hoy usan clientes reales, cada uno con su código abierto en GitHub.
       </p>
 
       <Reveal className="mt-14">

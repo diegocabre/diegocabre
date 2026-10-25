@@ -15,7 +15,7 @@ export function Contact() {
         <div className="lg:col-span-5">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Hablemos</h2>
           <p className="mt-4 max-w-[42ch] text-lg leading-relaxed text-muted">
-            Estoy disponible para trabajar. ¿Tienes una vacante o un proyecto? Escríbeme y te respondo a la brevedad.
+            Estoy disponible para sumarme a un equipo de forma remota. Si tienes una vacante o un proyecto, escríbeme y te respondo pronto.
           </p>
           <ul className="mt-8 space-y-3">
             {direct.map(({ href, label, icon: Icon }) => (
